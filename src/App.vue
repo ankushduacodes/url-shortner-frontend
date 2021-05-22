@@ -1,13 +1,37 @@
 <template>
   <nav-bar></nav-bar>
-
+  <div class="container-md">
+    <router-view v-slot="{ Component }">
+      <transition @enter="enterRouteHandler" @leave="leaveRouteHandler" mode="out-in">
+        <keep-alive>
+          <component :is="Component"></component>
+        </keep-alive>
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue';
 
+const { enterHandler, leaveHandler } = require('@/animations/routeAnimationHandler');
+
 export default {
   components: { NavBar },
+  data() {
+    return {
+      requestId: null,
+      show: false,
+    };
+  },
+  methods: {
+    enterRouteHandler(el, done) {
+      enterHandler(el, done);
+    },
+    leaveRouteHandler(el, done) {
+      leaveHandler(el, done);
+    },
+  },
 };
 </script>
 
@@ -30,12 +54,5 @@ body {
 }
 #nav {
   padding: 30px;
-}
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
