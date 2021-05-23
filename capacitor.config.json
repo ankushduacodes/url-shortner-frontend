@@ -1,0 +1,6 @@
+{
+  "appId": "com.ankush.urlShortener",
+  "appName": "URL Shortener",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
