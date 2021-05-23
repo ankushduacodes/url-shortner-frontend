@@ -20,5 +20,32 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Android App Setup
+```
+npx cap add android
+```
+
+### Open App in Android studio
+```
+npx cap open android
+```
+
+### Running android app
+```
+npx cap run android
+```
+
+## Ios App Setup
+```
+npx cap add ios
+```
+
+### Open App in xcode
+```
+npx cap open ios
+```
+
+### Running android app
+```
+npx cap run ios
+```
