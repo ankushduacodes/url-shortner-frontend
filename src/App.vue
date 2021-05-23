@@ -1,4 +1,5 @@
 <template>
+  <p></p>
   <nav-bar></nav-bar>
   <div class="container-md">
     <router-view v-slot="{ Component }">
@@ -31,6 +32,9 @@ export default {
     leaveRouteHandler(el, done) {
       leaveHandler(el, done);
     },
+  },
+  mounted() {
+    console.log(navigator.platform);
   },
 };
 </script>

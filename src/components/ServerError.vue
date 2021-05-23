@@ -1,11 +1,11 @@
 <template>
-$END$
+
 </template>
 
 <script>
 export default {
-name: "ServerError"
-}
+  name: 'ServerError',
+};
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-sm">
-      <router-link class="navbar-brand" to="/"><h2>ShortenIt</h2></router-link>
+      <a @click="hardRefresh" class="navbar-brand"><h2>ShortenIt</h2></a>
       <button class="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
@@ -35,6 +35,11 @@
 <script>
 export default {
   name: 'NavBar',
+  methods: {
+    hardRefresh() {
+      this.$router.go(0);
+    },
+  },
 };
 </script>
 
@@ -53,5 +58,9 @@ h2 {
   padding: 0;
   margin: 0;
   font-weight: 100;
+}
+
+.navbar-brand {
+  cursor: pointer;
 }
 </style>
