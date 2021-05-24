@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <img src="../assets/404.png" alt="404 Image"/>
-    <h1>Not Found</h1>
+    <img src="../assets/404.svg" alt="404 Image"/>
+    <h1>404 Not Found</h1>
     <h4>Go to <router-link to="/">Home</router-link></h4>
   </div>
 </template>
@@ -21,5 +21,7 @@ export default {
 img {
   height: 500px;
   width: 500px;
+  max-width: 100%;
+  max-height: 100%;
 }
 </style>

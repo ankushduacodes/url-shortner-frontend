@@ -13,8 +13,6 @@
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars
-import axios from 'axios';
 import BaseCard from '@/components/BaseUI/BaseCard.vue';
 import InputForm from '@/components/InputForm.vue';
 import TheOutput from '@/components/TheOutput.vue';
@@ -29,9 +27,7 @@ export default {
   name: 'Home',
   components: {
     TheLoader,
-    // eslint-disable-next-line vue/no-unused-components
     TheOutput,
-    // eslint-disable-next-line vue/no-unused-components
     InputForm,
     BaseCard,
   },
@@ -62,7 +58,7 @@ export default {
       if (this.output) {
         setTimeout(() => {
           this.switchComponent({ component: 'the-output' });
-        }, 2000);
+        }, 1000);
       }
     },
     error() {
