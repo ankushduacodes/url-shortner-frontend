@@ -15,7 +15,7 @@ const routes = [
   {
     path: '/:catchAll(.*)',
     name: 'NotFound',
-    component: () => import(/* webpackChunkName: "notfound" */ '@/views/NotFound.vue'),
+    component: () => import('@/views/NotFound.vue'),
   },
 ];
 
