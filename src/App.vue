@@ -1,5 +1,5 @@
 <template>
-  <p></p>
+  <p v-if="isIos"></p>
   <nav-bar></nav-bar>
   <div class="container-md">
     <router-view v-slot="{ Component }">
@@ -9,11 +9,14 @@
         </keep-alive>
       </transition>
     </router-view>
+    <notifications position="bottom right"/>
   </div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue';
+
+import { Capacitor } from '@capacitor/core';
 
 const { enterHandler, leaveHandler } = require('@/animations/routeAnimationHandler');
 
@@ -33,8 +36,10 @@ export default {
       leaveHandler(el, done);
     },
   },
-  mounted() {
-    console.log(navigator.platform);
+  computed: {
+    isIos() {
+      return Capacitor.getPlatform() === 'ios';
+    },
   },
 };
 </script>

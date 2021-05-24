@@ -55,12 +55,19 @@ export default {
     },
   },
   computed: {
-    ...mapState(['output']),
+    ...mapState(['output', 'error']),
   },
   watch: {
     output() {
       if (this.output) {
-        this.switchComponent({ component: 'the-output' });
+        setTimeout(() => {
+          this.switchComponent({ component: 'the-output' });
+        }, 2000);
+      }
+    },
+    error() {
+      if (this.error) {
+        this.switchComponent({ component: 'input-form' });
       }
     },
   },
