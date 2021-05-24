@@ -15,7 +15,12 @@ export default {
     try {
       result = await axios.post(`${baseURL}`, {
         url: payload.url,
-      }, { timeout: 3000 });
+      }, {
+        timeout: 3000,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
     } catch (err) {
       state.error = true;
       const toast = useToast();
