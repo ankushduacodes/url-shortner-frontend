@@ -4,7 +4,7 @@
       <img src="../assets/about.svg" alt="about-page-pic">
     </div>
     <base-card>
-      <h1>This is my college project</h1>
+      <h1>This is my college project <br> - Ankush Dua</h1>
     </base-card>
   </div>
 </template>
@@ -20,8 +20,9 @@ export default {
 
 <style scoped>
 img {
-  height: 100%;
-  width: 100%;
+  width: 600px;
+  height: 400px;
+  max-width: 100%;
 }
 
 h1 {

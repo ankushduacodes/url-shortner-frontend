@@ -9,7 +9,6 @@
         </keep-alive>
       </transition>
     </router-view>
-    />
   </div>
 </template>
 
