@@ -13,7 +13,6 @@
     "@capacitor/cli": "^3.0.0",
     "@capacitor/core": "^3.0.0",
     "@capacitor/ios": "^3.0.0",
-    "@kyvg/vue3-notification": "^2.3.0",
     "animejs": "^3.2.1",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta3",
@@ -21,6 +20,7 @@
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
+    "vue-toastification": "^2.0.0-rc.1",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {

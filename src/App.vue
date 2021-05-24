@@ -9,7 +9,7 @@
         </keep-alive>
       </transition>
     </router-view>
-    <notifications position="bottom right"/>
+    />
   </div>
 </template>
 
@@ -40,6 +40,9 @@ export default {
     isIos() {
       return Capacitor.getPlatform() === 'ios';
     },
+    isWeb() {
+      return Capacitor.getPlatform() === 'web';
+    },
   },
 };
 </script>
@@ -63,5 +66,18 @@ body {
 }
 #nav {
   padding: 30px;
+}
+
+p {
+  height: 38px;
+}
+
+.notification {
+  width: 500px;
+  max-width: 100%;
+}
+
+.custom-margin {
+  margin-bottom: 38px;
 }
 </style>

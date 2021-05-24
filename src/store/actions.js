@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { notify } from '@kyvg/vue3-notification';
+import { useToast } from 'vue-toastification';
 
 const baseURL = 'http://localhost:8001';
 
@@ -18,13 +18,8 @@ export default {
       }, { timeout: 3000 });
     } catch (err) {
       state.error = true;
-      notify({
-        title: '<b>Error</b>',
-        text: 'Something went wrong on the server. Please try again',
-        type: 'warn',
-        duration: 5000,
-        speed: 500,
-      });
+      const toast = useToast();
+      toast.error('Something went wrong on the server. Please try again');
       return;
     }
     commit('fetchOutput', result.data);
