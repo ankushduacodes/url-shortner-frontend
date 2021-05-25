@@ -56,9 +56,7 @@ export default {
   watch: {
     output() {
       if (this.output) {
-        setTimeout(() => {
-          this.switchComponent({ component: 'the-output' });
-        }, 1000);
+        this.switchComponent({ component: 'the-output' });
       }
     },
     error() {

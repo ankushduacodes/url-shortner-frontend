@@ -39,9 +39,6 @@ export default {
     isIos() {
       return Capacitor.getPlatform() === 'ios';
     },
-    isWeb() {
-      return Capacitor.getPlatform() === 'web';
-    },
   },
 };
 </script>

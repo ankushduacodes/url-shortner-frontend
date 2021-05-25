@@ -16,7 +16,7 @@ export default {
       result = await axios.post(`${baseURL}`, {
         url: payload.url,
       }, {
-        timeout: 3000,
+        timeout: 6000,
         headers: {
           'Content-Type': 'application/json',
         },
